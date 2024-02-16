@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simple Selectors</title>
+<style>
+/* all h2 elements */
+h2 {
+  color: red;
+  text-align: center;
+}
+/*Todos los que van resaltados con class="highlight"*/
+.resaltado {
+  font-size:20px;
+  font-weight:bold;
+  font-style:italic;
+  background-color:green;
+  opacity:.7;
+}
+/*Elemento con el identificador="puntoMain"*/
+#principal {
+  font-size:24px;
+  font-weight:bold;
+  background-color:red;
+  opacity:.7;
+}
+/*Todos los párrafos y elementos h1*/
+p,h1 {
+  color:blue;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<h1>Título: Selectores Simples</h1>
+<h2>Subencabezado 1</h2>
+<p class="resaltado">CSS permite agrupar varios selectores en una regla, separándolos con comas.</p>
+<p class="resaltado">Párrafo con el atributo.</p>
+<h2>Subencabezado 2</h2>
+<p>Esta lección trata sobre las hojas de estilo en cascada o CSS (Cascading Style Sheets). Veremos también cómo resolver conflictos en las reglas, el modelo de caja y las técnicas de diseño CSS. Luego aprenderemos a usar consultas de medios y sitios web que responden al código sin ningún marco, para así tener buenos fundamentos o bases de CSS, y poder comprender el uso de Bootstrap, uno de los framework receptivo CSS más populares.</p>
+<div>Este es el punto principal de todo el artículo. Por lo tanto, atributo
+<span id="principal">id="puntoMain".</span> </div>
+</body>
+</html>
