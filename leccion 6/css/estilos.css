@@ -76,6 +76,50 @@
   margin-top: -30px;
 }
 
+.container .jumbotron {
+  box-shadow: 0 0 50px #fff;
+  border: 1.5px solid #e7e7e7;
+}
+
+#mosaicomenu,
+#mosaicoesp,
+#mosaicomapa {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 1.5px solid #fff;
+  overflow: hidden;
+}
+#mosaicomenu:hover,
+#mosaicoesp:hover,
+#mosaicomapa:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#mosaicomenu {
+  background: url("../images/mosaicomenu.jpg") no-repeat;
+  background-position: center;
+}
+#mosaicoesp {
+  background: url("../images/mosaicoesp.jpg") no-repeat;
+  background-position: center;
+}
+#mosaicomenu span,
+#mosaicoesp span,
+#mosaicomapa span {
+  position: absolute; /*Se pone abajo y se ajusta al contenedor*/
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000; /*Color de fondo negro y blanco el texto*/
+  color: #fff; /*o color del primer plano.*/
+  opacity: 0.8; /*Transparencia del 20% */
+}
+
 /********** Pantalla grande **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
@@ -163,18 +207,72 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   } /*End Header*/
+  .panel-footer section { /*INICIO PIE DE PÁG*/
+    margin-bottom:20px;
+    text-align:center;
+    }
+    .panel-footer section:nth-child(3) {
+    margin-bottom:0; /*Margen ya existe en la fila*/
+    }
+    .panel-footer section hr {
+    width:50%;
+    } /*FIN PIE DE PÁG*/
   .container .jumbotron {
     /*Home Page*/
     margin-top: 30px;
     padding: 0;
+  }
+  #mosaicomenu,
+  #mosaicoesp {
+    width: 360px;
+    margin: 0 auto 15px;
   }
 } /*End HomePage*/
 .navbar-header button.navbar-toggle {
   clear: both;
   margin-top: -30px;
 }
+.panel-footer { /*INICIO PIE DE PÁG*/
+  margin-top:20px;
+  padding-top:15px;
+  padding-bottom:15px;
+  background-color:#222;
+  border-top:0px;
+  }
+  .panel-footer div.row {
+  margin-bottom:20px;
+  }
+  #Horario, #Domicilio, #Opiniones {
+  line-height: 2;
+  }
+  #Horario>span, #Domicilio>span, #Opiniones>span {
+  font-size: 1.3em;
+  }
+  #Domicilio p {
+  color:whitesmoke;
+  font-size: .75em;
+  line-height: 1.75;
+  }
+  #Opiniones {
+  font-style: italic;
+  }
+  #Opiniones p:nth-child(2) {
+  margin-top:15px;
+  } /*FIN PIE DE PÁG*/
+  
 .container .jumbotron {
   /* HOME PAGE */
   box-shadow: 0 0 50px #3f0c1f;
   border: 2px solid #3f0c1f;
 } /* END HOME PAGE */
+/******Dispositivos super pequeños como el iphone 4)*****/
+@media (max-width: 479px) {
+  .navbar-brand h1 {
+  padding-top:5px;
+  font-size:6vw;
+  }
+  #mosaicomenu, #mosaicoesp {
+  width:280px;
+  margin: 0 auto 15px;
+  }
+  }
