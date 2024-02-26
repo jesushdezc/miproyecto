@@ -1,3 +1,22 @@
+body {
+  font-size:16px;
+  color:white;
+  background-color:darkslategrey;
+  font-family:'Oxygen',sans-serif;
+  } 
+  /*Sigue el ENCABEZADO*/
+  #header-nav {
+  background-color:gold;
+  border-radius:0;
+  border:0;
+ }
+ #logotip {
+  background: url('../images/patitog.png') no-repeat;
+  width:107px;
+  height:151px;
+  margin:10px 15px 10px 0;
+  }
+  
 #logo-marca {
   background: url("../images/logo-marca.png") no-repeat;
   width: 63px;
@@ -63,7 +82,10 @@
   /*Envíos*/
   color: #557c3e;
   text-align: right;
-  padding-right: 15px;
+  text-transform:uppercase;
+  background-color:#000;
+  color:#fff;
+  opacity:.8;
 }
 
 .navbar-header button.navbar-toggle,
@@ -119,6 +141,70 @@
   color: #fff; /*o color del primer plano.*/
   opacity: 0.8; /*Transparencia del 20% */
 }
+.mosaicocategoria {
+  position: relative;
+  border: 2px solid whitesmoke;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px;
+}
+.mosaicocategoria:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+#titulocategorias + div {
+  margin-bottom: 40px;
+}
+
+/*PÁGINA ESPECIALIDADES*/
+.mosaicoespecial {
+  margin-bottom: 40px;
+}
+.mosaicoespecial hr {
+  width: 80%;
+}
+.mosaicoespecial .precio {
+  font-size: 1.1em;
+  text-align: right;
+  margin-top: -15px;
+  margin-right: -15px;
+}
+.mosaicoespecial .precio span {
+  font-size: 0.6em;
+}
+.fotoespeciales {
+  position: relative;
+  border: 2px solid #6d6d6d;
+  overflow: hidden;
+  padding: 0;
+  margin-right: -15px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+.fotoespeciales div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80px;
+  background-color: #ffffff;
+  color: #000;
+  font-weight: bolder;
+  text-align: center;
+  opacity: 0.6;
+}
+.descripcion {
+  padding-right: 30px;
+}
+h3.tituloespecials {
+  margin: 0 0 10px;
+}
+.detalles {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+/*FIN PÁGINA ESPECIALIDADES*/
 
 /********** Pantalla grande **********/
 @media (min-width: 1200px) {
@@ -207,16 +293,17 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   } /*End Header*/
-  .panel-footer section { /*INICIO PIE DE PÁG*/
-    margin-bottom:20px;
-    text-align:center;
-    }
-    .panel-footer section:nth-child(3) {
-    margin-bottom:0; /*Margen ya existe en la fila*/
-    }
-    .panel-footer section hr {
-    width:50%;
-    } /*FIN PIE DE PÁG*/
+  .panel-footer section {
+    /*INICIO PIE DE PÁG*/
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3) {
+    margin-bottom: 0; /*Margen ya existe en la fila*/
+  }
+  .panel-footer section hr {
+    width: 50%;
+  } /*FIN PIE DE PÁG*/
   .container .jumbotron {
     /*Home Page*/
     margin-top: 30px;
@@ -232,47 +319,72 @@
   clear: both;
   margin-top: -30px;
 }
-.panel-footer { /*INICIO PIE DE PÁG*/
-  margin-top:20px;
-  padding-top:15px;
-  padding-bottom:15px;
-  background-color:#222;
-  border-top:0px;
-  }
-  .panel-footer div.row {
-  margin-bottom:20px;
-  }
-  #Horario, #Domicilio, #Opiniones {
+.panel-footer {
+  /*INICIO PIE DE PÁG*/
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #222;
+  border-top: 0px;
+}
+.panel-footer div.row {
+  margin-bottom: 20px;
+}
+#Horario,
+#Domicilio,
+#Opiniones {
   line-height: 2;
-  }
-  #Horario>span, #Domicilio>span, #Opiniones>span {
+}
+#Horario > span,
+#Domicilio > span,
+#Opiniones > span {
   font-size: 1.3em;
-  }
-  #Domicilio p {
-  color:whitesmoke;
-  font-size: .75em;
+}
+#Domicilio p {
+  color: whitesmoke;
+  font-size: 0.75em;
   line-height: 1.75;
-  }
-  #Opiniones {
+}
+#Opiniones {
   font-style: italic;
-  }
-  #Opiniones p:nth-child(2) {
-  margin-top:15px;
-  } /*FIN PIE DE PÁG*/
-  
+}
+#Opiniones p:nth-child(2) {
+  margin-top: 15px;
+} /*FIN PIE DE PÁG*/
+
 .container .jumbotron {
   /* HOME PAGE */
   box-shadow: 0 0 50px #3f0c1f;
   border: 2px solid #3f0c1f;
-} /* END HOME PAGE */
+}
+.fotoespeciales {
+  margin-right: auto;
+}
+.mosaicoespecial .precio {
+  text-align: center;
+}
+.descripcion {
+  text-align: center;
+}
+
+/* END HOME PAGE */
 /******Dispositivos super pequeños como el iphone 4)*****/
 @media (max-width: 479px) {
   .navbar-brand h1 {
-  padding-top:5px;
-  font-size:6vw;
+    padding-top: 5px;
+    font-size: 6vw;
   }
-  #mosaicomenu, #mosaicoesp {
-  width:280px;
-  margin: 0 auto 15px;
+  #mosaicomenu,
+  #mosaicoesp {
+    width: 280px;
+    margin: 0 auto 15px;
   }
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
   }
+}
